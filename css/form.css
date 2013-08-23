@@ -1,0 +1,55 @@
+body{
+    background-image: url(../images/black.png);
+}
+
+.question{
+    font-size: 12px;
+}
+
+.ss-choices{
+    font-size: 12px;
+    list-style-type: none;
+}
+
+.aria-todo{
+    margin-bottom: -5px;
+    line-height: 1px;
+}
+
+.right{
+    float: right;
+}
+
+.submitBtn{
+    margin: -30px 0px 0px 0px;
+}
+
+.contain{
+    width:960px;
+    margin:auto;
+}
+
+#bgImg{
+    /*margin-top: -40px;*/
+}
+
+.poll{
+    margin: 20px 0px 0px 20px;
+    position: absolute;
+    z-index: 100;
+}
+
+#bubbles{
+    margin-top:-670px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.area {
+  fill: steelblue;
+}
