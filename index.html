@@ -8,9 +8,58 @@
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
 <script type='text/javascript' src='js/bootstrap.js'></script>
 <script type='text/javascript' src='js/d3.v3.min.js'></script>
+<script src="http://alt.coxnewsweb.com/ajc/_newsapps/libraries/utility/tabletop/tabletop.js" type="text/javascript"></script>
 
     
     <title>Quicksand</title>
+
+<!--<script type="text/javascript">
+  window.onload = function() { init() };
+
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Apf7BK7HxcJXdFQydmVOTzlWR3I2VkQ1WDFQNXZiWWc&output=html';
+
+  function init() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  /*function showInfo(data, tabletop) {
+    //alert("Successfully processed!")
+    console.log(data);
+  }*/
+
+function showInfo(gdata, tabletop){
+	console.log("parsing");
+        var d = new Date();
+        var month = d.getMonth()+1;
+//console.log(month);
+        var day = d.getDate();
+        var year = d.getFullYear();
+	//var d = new Date();
+        //var n = d.getDate();
+        var len = gdata.length;
+        var sum = 0;
+        var average = 0;
+        
+	$.each(gdata, function (i, gdata){
+            
+		//ID = "id"+i;
+                var date = gdata.Timestamp;
+		var level = gdata.level;
+		var year = gdata.year;
+                sum+=parseInt(level) || 0;
+                average = sum/len;
+		//lilImg = '<a href="#"><img class="lilImg" src="' + imgSrc + '" width="120px" height="120px"/></a>';
+
+	});
+        console.log(sum);
+        console.log(average);
+        $('<p>'+ average +'</p>').appendTo('#current');
+};
+        
+</script>-->
+
 </head>
 
 <body>
@@ -79,6 +128,16 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+  
+<div class="panel panel-default right level">
+  <div class="panel-heading">
+    <h3 class="panel-title">The current stress level is...</h3>
+  </div>
+  <div class="panel-body">
+    <div id="current"></div>
+    
+  </div>
+</div>
 
 <!-- svg -->
 <div id="bgImg">
@@ -257,10 +316,10 @@
 <!-- end svg -->
   
 <div id="bubbles"></div>
-<div id="area"></div>
+<!--<div id="area"></div>-->
 </div>
 </body>
 
 <script type='text/javascript' src='js/bubbles.js'></script>
-<script type='text/javascript' src='js/area.js'></script>
+<!--<script type='text/javascript' src='js/area.js'></script>-->
 </html>

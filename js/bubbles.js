@@ -2,12 +2,51 @@ var margin = {top: 0, right: 0, bottom: 0, left: 0},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
+var svg = d3.select("#bubbles").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 var n = 200,
     m = 4,
     padding = 6,
     radius = d3.scale.sqrt().range([0, 12]),
     color = d3.scale.category10().domain(d3.range(m)),
     x = d3.scale.ordinal().domain(d3.range(m)).rangePoints([0, width], 1);
+
+window.onload = function() { init() };
+
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Apf7BK7HxcJXdFQydmVOTzlWR3I2VkQ1WDFQNXZiWWc&output=html';
+
+  function init() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+function showInfo(gdata, tabletop){
+	console.log("parsing");
+        var d = new Date();
+        var month = d.getMonth()+1;
+//console.log(month);
+        var day = d.getDate();
+        var year = d.getFullYear();
+	//var d = new Date();
+        //var n = d.getDate();
+        var len = gdata.length;
+        var sum = 0;
+        var average = 0;
+        
+	$.each(gdata, function (i, gdata){
+            
+		//ID = "id"+i;
+                var date = gdata.Timestamp;
+		var level = gdata.level;
+		var year = gdata.year;
+                sum+=parseInt(level) || 0;
+                average = sum/len;
+
 
 var nodes = d3.range(n).map(function() {
   var i = Math.floor(Math.random() * m),
@@ -28,11 +67,7 @@ var force = d3.layout.force()
     .on("tick", tick)
     .start();
 
-var svg = d3.select("#bubbles").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 
 var circle = svg.selectAll("circle")
     .data(nodes)
@@ -87,3 +122,7 @@ function collide(alpha) {
     });
   };
 }
+	});
+        $('<p>'+ average +'</p>').appendTo('#current');
+
+};

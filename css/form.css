@@ -39,6 +39,12 @@ body{
     z-index: 100;
 }
 
+.level{
+    margin: 20px 0px 0px 670px;
+    position: absolute;
+    z-index: 100;
+}
+
 #bubbles{
     margin-top:-670px;
 }
