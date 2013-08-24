@@ -13,53 +13,6 @@
     
     <title>Quicksand</title>
 
-<!--<script type="text/javascript">
-  window.onload = function() { init() };
-
-  var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Apf7BK7HxcJXdFQydmVOTzlWR3I2VkQ1WDFQNXZiWWc&output=html';
-
-  function init() {
-    Tabletop.init( { key: public_spreadsheet_url,
-                     callback: showInfo,
-                     simpleSheet: true } )
-  }
-
-  /*function showInfo(data, tabletop) {
-    //alert("Successfully processed!")
-    console.log(data);
-  }*/
-
-function showInfo(gdata, tabletop){
-	console.log("parsing");
-        var d = new Date();
-        var month = d.getMonth()+1;
-//console.log(month);
-        var day = d.getDate();
-        var year = d.getFullYear();
-	//var d = new Date();
-        //var n = d.getDate();
-        var len = gdata.length;
-        var sum = 0;
-        var average = 0;
-        
-	$.each(gdata, function (i, gdata){
-            
-		//ID = "id"+i;
-                var date = gdata.Timestamp;
-		var level = gdata.level;
-		var year = gdata.year;
-                sum+=parseInt(level) || 0;
-                average = sum/len;
-		//lilImg = '<a href="#"><img class="lilImg" src="' + imgSrc + '" width="120px" height="120px"/></a>';
-
-	});
-        console.log(sum);
-        console.log(average);
-        $('<p>'+ average +'</p>').appendTo('#current');
-};
-        
-</script>-->
-
 </head>
 
 <body>
@@ -314,12 +267,9 @@ function showInfo(gdata, tabletop){
 </div>
 
 <!-- end svg -->
-  
-<div id="bubbles"></div>
-<!--<div id="area"></div>-->
+
 </div>
 </body>
 
-<script type='text/javascript' src='js/bubbles.js'></script>
-<!--<script type='text/javascript' src='js/area.js'></script>-->
+<script type='text/javascript' src='js/nums.js'></script>
 </html>
