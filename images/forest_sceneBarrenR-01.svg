@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg9520" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.48.0 r9654" sodipodi:docname="New document 4"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="319px" height="780.572px"
+	 viewBox="288.5 0 319 780.572" enable-background="new 288.5 0 319 780.572" xml:space="preserve">
+<g>
+	<circle fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="449.475" cy="165.029" r="35.684"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="446.791" y1="199.925" x2="446.791" y2="351.318"/>
+	<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="446.791" y1="255.759" x2="513.36" y2="208.515"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="446.791" y1="255.759" x2="386.662" y2="207.441"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="446.791" y1="351.318" x2="495.107" y2="454.395"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="446.791" y1="351.318" x2="398.473" y2="456.542"/>
+	<g>
+		<path fill="#7CCEF2" d="M416.559,216.825l14.512,13.218c0,0,10.703,17.2,24.63,1.803c12.923-9.002,21.745-15.979,21.745-15.979
+			l16.734,26.44l-22.796,20.259l2.248,51.173h-57.979l-0.596-51.156l-20.878-21.855L416.559,216.825z"/>
+		<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M416.559,216.825l14.512,13.218
+			c0,0,10.703,17.2,24.63,1.803c12.923-9.002,21.745-15.979,21.745-15.979l16.734,26.44l-22.796,20.259l2.248,51.173h-57.979
+			l-0.596-51.156l-20.878-21.855L416.559,216.825z"/>
+	</g>
+	
+		<image overflow="visible" enable-background="new    " width="836" height="1216" xlink:href="uncflag.png"  transform="matrix(0.058 0 0 0.058 419.9482 241.7998)">
+	</image>
+</g>
+<line id="inv" fill="none" x1="445.494" y1="457.572" x2="445.494" y2="712.572"/>
+<rect x="288.5" y="456.572" fill="#F7D277" width="319" height="162"/>
+<ellipse fill="#F7D277" cx="447" cy="616.572" rx="158.5" ry="160"/>
+</svg>

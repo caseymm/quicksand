@@ -106,7 +106,15 @@ function showInfo(gdata, tabletop){
         console.log(avgSo);
         console.log(avgJ);
         console.log(avgSr);
-        $('<p>'+ round +'</p>').appendTo('#current');
+	roundF = precise_round(avgF, 2);
+	roundSo = precise_round(avgSo, 2);
+	roundJ = precise_round(avgJ, 2);
+	roundSr = precise_round(avgSr, 2);
+        $('<p class="all">'+ round +'</p>').appendTo('#current');
+	$('<p>'+ roundF +'</p>').appendTo('#freshmanStress');
+	$('<p>'+ roundSo +'</p>').appendTo('#sophomoreStress');
+	$('<p>'+ roundJ +'</p>').appendTo('#juniorStress');
+	$('<p>'+ roundSr +'</p>').appendTo('#seniorStress');
 	
 	var sink = document.getElementById("pathA");
 	sink.setAttribute("d", "M 0 0 l 0 " + (round*25.5));
