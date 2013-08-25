@@ -59,3 +59,11 @@ body{
 .area {
   fill: steelblue;
 }
+
+.year{
+    text-align: center;
+}
+
+#stats{
+    margin: -530px 0px 0px 0px;
+}

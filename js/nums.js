@@ -19,7 +19,7 @@
 function showInfo(gdata, tabletop){
         var d = new Date();
         var month = d.getMonth()+1;
-	//console.log(month);
+	console.log(d);
         var day = d.getDate();
         var year = d.getFullYear();
 	//var d = new Date();
@@ -36,34 +36,37 @@ function showInfo(gdata, tabletop){
         var avgJ = 0;
         var avgSr = 0;
 	var round;
+	var allToday;
+	var levelsToday;
 	
 	var freshman = [];
 	var sophomores = [];
 	var juniors = [];
 	var seniors = [];
-        
-        /*var fsData = $.grep(gdata, function (n, i) {
-            return n.year == "Freshman" || n.year == "Sophomore" || n.year == "Junior" || n.year == "Senior";
-	  
-            });*/
-	//var len = fsData.length;
+	var total = [];
         
 	$.each(gdata, function (i, data){
         
-                var date = data.Timestamp;
+                var date = data.day;
 		var level = data.level;
 		var year = data.year;
                 sum+=parseInt(level) || 0;
-                average = sum/len;
-		round = precise_round(average, 2);
+                //average = sum/len;
+		
+		var todaysDate = moment(date).format("M/DD/YYYY");
+		var getToday = moment().format("M/DD/YYYY");
+	
+	if (todaysDate === getToday) {
 		
 		if (data.year == "Freshman" || data.year == "Sophomore" || data.year == "Junior"|| data.year == "Senior") {
-		    //total.push(data);
+		    total.push(data);
 		    if (data.year == "Freshman") freshman.push(data);
 		    if (data.year == "Sophomore") sophomores.push(data);
 		    if (data.year == "Junior") juniors.push(data);
 		    if (data.year == "Senior") seniors.push(data);
-		console.log(freshman.length);
+		
+		allToday = (freshman.length + sophomores.length + juniors.length + seniors.length);
+		
 
         switch(year) {
           case 'Freshman':
@@ -90,9 +93,14 @@ function showInfo(gdata, tabletop){
           default:
             
         }
+	levelsToday = (sumF + sumSo + sumJ + sumSr);
+	average = levelsToday/allToday;
+	round = precise_round(average, 2);
+}
 }
 	});
-        console.log(sum);
+	console.log(allToday);
+        //console.log(sum);
         console.log(average);
         console.log(avgF);
         console.log(avgSo);
