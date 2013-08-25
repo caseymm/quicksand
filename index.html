@@ -9,7 +9,7 @@
 <script type='text/javascript' src='js/bootstrap.js'></script>
 <script type='text/javascript' src='js/d3.v3.min.js'></script>
 <script src="http://alt.coxnewsweb.com/ajc/_newsapps/libraries/utility/tabletop/tabletop.js" type="text/javascript"></script>
-
+<script type='text/javascript' src='js/nums.js'></script>
     
     <title>Quicksand</title>
 
@@ -236,8 +236,16 @@
 	c30.763,64.206,132.891,207.957,366.15-23.138C345.813,30.758,127.063,232.546,8.002,20.327"/>
 <path id="path3985" inkscape:connector-curvature="0" fill="#634B34" d="M681.789,0.001c0,0,73.056,193.595,283.701,254.474
 	C965.49,254.475,803.543,205.773,681.789,0.001"/>
-<g>
-	<circle fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="449.475" cy="165.029" r="35.684"/>
+
+<path id="pathA" d="M 0 0 l 0 255" stroke="none" stroke-width="0" fill="none"/>
+
+<g id="person">
+    
+	<circle id="circle1" fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="449.475" cy="165.029" r="35.684">
+            <!--<animateMotion fill="freeze" id="circle2" accumulate="none" begin="1s" dur="3s" restart="never">
+			<mpath  xlink:href="#pathA"></mpath>
+            </animateMotion> -->
+        </circle>
 	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="446.791" y1="199.925" x2="446.791" y2="351.318"/>
 	<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="446.791" y1="255.759" x2="513.36" y2="208.515"/>
@@ -257,11 +265,18 @@
 	
 		<image overflow="visible" width="836" height="1216" xlink:href="images/uncflag.png"  transform="matrix(0.058 0 0 0.058 419.9487 241.8003)">
 	</image>
+        
+       <animateMotion fill="freeze" id="person2" accumulate="none" begin="1s" dur="3s" restart="never">
+			<mpath  xlink:href="#pathA"></mpath>
+       </animateMotion>
+               
 </g>
+
 <rect x="4.658" y="642.167" fill="#F7D277" width="964.898" height="493.354"/>
 <path fill="#F7D277" d="M291.139,457.616h327.427c0,0,15.08,45.148,96.937,73.831c81.857,28.683,166.945,43.767,200.334,61.189
 	c33.389,17.422,51.699,33.357,52.775,56.196c1.077,22.841,0,309.666,0,309.666H8.948V649.365c0,0-21.541-24.222,43.083-56.729
 	c64.623-32.507,112.014-37.818,161.559-64.376C263.136,501.703,291.139,457.616,291.139,457.616z"/>
+
 </svg>
 
 </div>
@@ -271,5 +286,5 @@
 </div>
 </body>
 
-<script type='text/javascript' src='js/nums.js'></script>
+
 </html>

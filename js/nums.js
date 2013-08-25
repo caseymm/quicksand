@@ -1,4 +1,7 @@
-  window.onload = function() { init() };
+  window.onload = function() {
+    init()
+    
+    };
 
   var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Apf7BK7HxcJXdFQydmVOTzlWR3I2VkQ1WDFQNXZiWWc&output=html';
 
@@ -8,16 +11,15 @@
                      simpleSheet: true } )
   }
 
-  /*function showInfo(data, tabletop) {
-    //alert("Successfully processed!")
-    console.log(data);
-  }*/
+  function precise_round(num,decimals){
+  return Math.round(num*Math.pow(10,decimals))/Math.pow(10,decimals);
+  }
+  
 
 function showInfo(gdata, tabletop){
-	console.log("parsing");
         var d = new Date();
         var month = d.getMonth()+1;
-//console.log(month);
+	//console.log(month);
         var day = d.getDate();
         var year = d.getFullYear();
 	//var d = new Date();
@@ -33,48 +35,62 @@ function showInfo(gdata, tabletop){
         var avgSo = 0;
         var avgJ = 0;
         var avgSr = 0;
+	var round;
+	
+	var freshman = [];
+	var sophomores = [];
+	var juniors = [];
+	var seniors = [];
         
-	$.each(gdata, function (i, gdata){
-            
-		//ID = "id"+i;
-                var date = gdata.Timestamp;
-		var level = gdata.level;
-		var year = gdata.year;
+        /*var fsData = $.grep(gdata, function (n, i) {
+            return n.year == "Freshman" || n.year == "Sophomore" || n.year == "Junior" || n.year == "Senior";
+	  
+            });*/
+	//var len = fsData.length;
+        
+	$.each(gdata, function (i, data){
+        
+                var date = data.Timestamp;
+		var level = data.level;
+		var year = data.year;
                 sum+=parseInt(level) || 0;
                 average = sum/len;
-                
+		round = precise_round(average, 2);
 		
+		if (data.year == "Freshman" || data.year == "Sophomore" || data.year == "Junior"|| data.year == "Senior") {
+		    //total.push(data);
+		    if (data.year == "Freshman") freshman.push(data);
+		    if (data.year == "Sophomore") sophomores.push(data);
+		    if (data.year == "Junior") juniors.push(data);
+		    if (data.year == "Senior") seniors.push(data);
+		console.log(freshman.length);
+
         switch(year) {
           case 'Freshman':
             sumF+=parseInt(level) || 0;
-            console.log(sumF);
-            avgF = sumF/len;
+            avgF = sumF/(freshman.length);
             
             break;
           case 'Sophomore':
             sumSo+=parseInt(level) || 0;
-            console.log(sumSo);
-            avgSo = sumSo/len;
+            avgSo = sumSo/(sophomores.length);
             
             break;
           case 'Junior':
             sumJ+=parseInt(level) || 0;
-            console.log(sumJ);
-            avgJ = sumJ/len;
+            avgJ = sumJ/(juniors.length);
             
             break;
           case 'Senior':
             sumSr+=parseInt(level) || 0;
-            console.log(sumSr);
-            
-            avgSr = sumSr/len;
+            avgSr = sumSr/(seniors.length);
             
             break;
           
           default:
-            console.log("");
+            
         }
-
+}
 	});
         console.log(sum);
         console.log(average);
@@ -82,5 +98,10 @@ function showInfo(gdata, tabletop){
         console.log(avgSo);
         console.log(avgJ);
         console.log(avgSr);
-        $('<p>'+ average +'</p>').appendTo('#current');
+        $('<p>'+ round +'</p>').appendTo('#current');
+	
+	var sink = document.getElementById("pathA");
+	sink.setAttribute("d", "M 0 0 l 0 " + (round*25.5));
+	var object = document.getElementById("person");
+	//object.beginElement();
 };
