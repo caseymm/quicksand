@@ -1554,7 +1554,7 @@ textarea.input-small {
 
 .btn {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 8px 37px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 500;
@@ -2295,8 +2295,9 @@ a.list-group-item.active .list-group-item-text {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 17.5px;
+  font-size: 16.5px;
   font-weight: 500;
+  line-height: 24px;
 }
 
 .panel-footer {

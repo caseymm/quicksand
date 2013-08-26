@@ -1,5 +1,7 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
 body{
-    background-image: url(../images/background.png);
+    background-image: url(../images/background1.png);
 }
 
 .question{
@@ -32,13 +34,15 @@ body{
 }
 
 #bgImg{
-    /*margin-top: -40px;*/
+    width: 320px;
+    margin: auto;
+    margin-top: 7px;
 }
 
 .poll{
-    margin: 20px 0px 0px 20px;
-    position: absolute;
-    z-index: 100;
+    margin: auto;
+    width: 300px;
+    padding-top: 20px;
 }
 
 .level{
@@ -80,10 +84,10 @@ body{
     margin: 20px 0px 0px 0px;
 }
 
-.bgImg{
+/*.bgImg{
     width:320px;
     margin:auto;
-}
+}*/
 
 .white{
     background-color: #ffffff;
@@ -102,4 +106,33 @@ border-color: gray;
 
 .headerText{
     background-color: #f5f5f5;
+}
+
+.inline{
+    display: inline;
+    font-size: 15px;
+    padding-right: 3px;
+}
+
+.inlineT{
+    display: inline;;
+}
+
+.votes{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.five{
+    margin-top:-5px;
+}
+
+.bump{
+    line-height: 3;
+}
+
+.stressed{
+    font-size: 50px;
+    margin-left: 55px;
+    color: #ffffff;
 }

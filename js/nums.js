@@ -1,5 +1,8 @@
   window.onload = function() {
     init()
+    var formatToday = moment().format('MMMM Do YYYY, h:mm:ss a');
+		
+		$('<p class="inlineT">'+ formatToday +'</p>').appendTo('#giveToday');
     
     };
 
@@ -39,6 +42,7 @@ function showInfo(gdata, tabletop){
 	var allToday;
 	var levelsToday;
 	
+	
 	var freshman = [];
 	var sophomores = [];
 	var juniors = [];
@@ -55,6 +59,7 @@ function showInfo(gdata, tabletop){
 		
 		var todaysDate = moment(date).format("M/DD/YYYY");
 		var getToday = moment().format("M/DD/YYYY");
+		
 	
 	if (todaysDate === getToday) {
 		
@@ -110,11 +115,19 @@ function showInfo(gdata, tabletop){
 	roundSo = precise_round(avgSo, 2);
 	roundJ = precise_round(avgJ, 2);
 	roundSr = precise_round(avgSr, 2);
-        $('<p class="all">'+ round +'</p>').appendTo('#current');
-	$('<p>'+ roundF +'</p>').appendTo('#freshmanStress');
-	$('<p>'+ roundSo +'</p>').appendTo('#sophomoreStress');
-	$('<p>'+ roundJ +'</p>').appendTo('#juniorStress');
-	$('<p>'+ roundSr +'</p>').appendTo('#seniorStress');
+        $('<p class="all votes">'+ round +'</p>').appendTo('#current');
+	$('<p class="inline">'+ freshman.length +'</p>').appendTo('#freshmanResp');
+	$('<p class="votes">'+ roundF +'</p>').appendTo('#freshmanStress');
+	$('<p class="inline">'+ sophomores.length +'</p>').appendTo('#sophomoreResp');
+	$('<p class="votes">'+ roundSo +'</p>').appendTo('#sophomoreStress');
+	$('<p class="inline">'+ juniors.length +'</p>').appendTo('#juniorResp');
+	$('<p class="votes">'+ roundJ +'</p>').appendTo('#juniorStress');
+	$('<p class="inline">'+ seniors.length +'</p>').appendTo('#seniorResp');
+	$('<p class="votes">'+ roundSr +'</p>').appendTo('#seniorStress');
+	
+	$('#ss-submit').click(function() {
+	$('#myModal').modal('hide');
+	});
 	
 	var sink = document.getElementById("pathA");
 	sink.setAttribute("d", "M 0 0 l 0 " + (round*25.5));
