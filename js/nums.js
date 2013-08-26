@@ -58,8 +58,9 @@ function showInfo(gdata, tabletop){
                 //average = sum/len;
 		
 		var todaysDate = moment(date).format("M/DD/YYYY");
+		console.log(todaysDate);
 		var getToday = moment().format("M/DD/YYYY");
-		
+		console.log(getToday);
 	
 	if (todaysDate === getToday) {
 		
