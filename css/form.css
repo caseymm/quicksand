@@ -132,7 +132,39 @@ border-color: gray;
 }
 
 .stressed{
-    font-size: 50px;
-    margin-left: 55px;
+    font-size: 40px;
     color: #ffffff;
+    float: left;
+}
+
+.twitter{
+    font-size:20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none !important;
+    color:#ffffff !important;
+}
+
+a:hover{
+    text-decoration: none !important;
+    color:#dddddd !important;
+}
+
+#loadingSq{
+    width: 130px;
+    height: 100px;
+    margin: auto;
+    background-color: #ffffff;
+    text-align:center;
+    /*position:absolute;
+    z-index: 2000;*/
+}
+
+.loadMessage{
+    font-size: 20px;
+    color: #27b056;
+    padding-top: 15px;
 }

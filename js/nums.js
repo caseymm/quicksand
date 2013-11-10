@@ -11,6 +11,7 @@
   function init() {
     Tabletop.init( { key: public_spreadsheet_url,
                      callback: showInfo,
+		     //proxy: 'https://s3.amazonaws.com/stressedmuch',
                      simpleSheet: true } )
   }
 

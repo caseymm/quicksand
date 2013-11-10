@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -14,16 +15,33 @@
 <script src="js/tabletop.js" type="text/javascript"></script>
 <script type='text/javascript' src='js/moment.js'></script>
 <script type='text/javascript' src='js/nums.js'></script>
+<script type='text/javascript' src='js/sonic.js'></script>
     
     <title>Stressed Much?</title>
 
 </head>
 
 <body>
+    
+<!-- Modal -->
+<div class="modal fade" id="loading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+        <div id="loadingSq">
+            <p class="loadMessage">Recalculating...</p>
+        </div>
+    
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+
+    
 <div class="containerA">
     <div class="row">
-        <div class="col-xs-12">
-            <span class="stressed">Stressed Much?</span>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="poll"><span class="stressed">Stressed Much?</span></div>
         </div>
     </div>
     <div class="row">
@@ -45,12 +63,19 @@
         
         <!--<form action="https://docs.google.com/forms/d/14L2PgjpAKjYUGHVUczGcHgGucIAhSqnxLCS8LL0Tv74/formResponse" method="POST" id="ss-form" target="blank" >-->
           
-          <script type="text/javascript">var submitted=false;</script>
+          <!--<script type="text/javascript">var submitted=false;</script>-->
 <iframe name="hidden_iframe" id="hidden_iframe"
 style="display:none;" onload="if(submitted)
-{window.location='http://caseymmiller.com/stressedmuch';}"></iframe>
+{$('#loading').modal('show');
+    setTimeout(function(){
+        
+         window.location.href = window.location.href;
+}, 5000);
+    }"></iframe>
 <form action="https://docs.google.com/forms/d/14L2PgjpAKjYUGHVUczGcHgGucIAhSqnxLCS8LL0Tv74/formResponse" method="post"
 target="hidden_iframe" onsubmit="submitted=true;">
+    
+    
           
           <ol style="padding-left: 0">
 <div class="ss-form-question errorbox-good">
@@ -59,12 +84,13 @@ target="hidden_iframe" onsubmit="submitted=true;">
 <span class="ss-required-asterisk">*</span></div>
 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
 
-<table class="question" border="0" cellpadding="5" cellspacing="0" id="entry_240989817"><tr aria-hidden class="aria-todo"><td class="ss-scalenumbers"></td>
+<table class="question" border="0" cellpadding="5" cellspacing="0" id="entry_240989817"><tr aria-hidden class="aria-todo">
 <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_1">1</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_2">2</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_3">3</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_4">4</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_5">5</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_6">6</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_7">7</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_8">8</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_9">9</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_240989817_10">10</label></td>
 <td class="ss-scalenumbers"></td></tr>
-<tr><td class="ss-scalerow ss-leftlabel"><div aria-hidden class="aria-todo">Not stressed </div></td>
+    
+<tr>
 <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="1" id="group_240989817_1" class="ss-q-radio" aria-label="1" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="2" id="group_240989817_2" class="ss-q-radio" aria-label="2" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="3" id="group_240989817_3" class="ss-q-radio" aria-label="3" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="4" id="group_240989817_4" class="ss-q-radio" aria-label="4" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="5" id="group_240989817_5" class="ss-q-radio" aria-label="5" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="6" id="group_240989817_6" class="ss-q-radio" aria-label="6" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="7" id="group_240989817_7" class="ss-q-radio" aria-label="7" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="8" id="group_240989817_8" class="ss-q-radio" aria-label="8" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="9" id="group_240989817_9" class="ss-q-radio" aria-label="9" required=""></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.240989817" value="10" id="group_240989817_10" class="ss-q-radio" aria-label="10" required=""></div></td>
-<td class="ss-scalerow ss-rightlabel aria-todo" aria-hidden>I'M DYING</td></tr></table>
+</tr></table>
 
 </div></div></div> <div class="ss-form-question errorbox-good">
 <div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="question" for="entry_436857689"><div class="question">What year are you?
@@ -89,7 +115,9 @@ target="hidden_iframe" onsubmit="submitted=true;">
 
 <div class="ss-item ss-navigate right submitBtn"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
 
-<input class="btn btn-primary right" type="submit" name="submit" value="Submit" id="ss-submit" onclick="" >
+
+    <input class="btn btn-primary right" type="submit" name="submit" value="Submit" id="ss-submit">
+
 <button type="button" class="btn btn-default right" data-dismiss="modal">Close</button>
 
 </td>
@@ -112,7 +140,7 @@ target="hidden_iframe" onsubmit="submitted=true;">
 <svg version="1.1"
 	 id="svg9520" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.48.0 r9654" sodipodi:docname="New document 4"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="319px" height="750.572px"
-	 viewBox="288.5 101 319 800" enable-background="new 288.5 101 319 800" xml:space="preserve">
+	 viewBox="288.5 110 319 800" enable-background="new 288.5 110 319 800" xml:space="preserve">
 <sodipodi:namedview  id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:zoom="0.35" inkscape:cx="396.34196" inkscape:cy="30.100305" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" inkscape:pageopacity="0.0" inkscape:document-units="px" inkscape:pageshadow="2" inkscape:window-x="25" inkscape:current-layer="layer1" inkscape:window-y="25" inkscape:window-maximized="0" inkscape:window-width="469" fit-margin-bottom="0" inkscape:window-height="425">
 	</sodipodi:namedview>
 
@@ -186,6 +214,8 @@ target="hidden_iframe" onsubmit="submitted=true;">
         <tr><td><span class="bump">Seniors <span class="badge five"><span id="seniorResp"></span> <span class="glyphicon glyphicon-user"></span></span></span></td><td><div id="seniorStress"></div></td></tr>
     </tbody>
   </table>
+
+  <span class="twitter"><a href="http://twitter.com/caseymmiller" target="blank">@caseymmiller</a></span>
      
 
 <!--<div class="panel panel-default">
@@ -203,6 +233,40 @@ target="hidden_iframe" onsubmit="submitted=true;">
 <!-- end svg -->
 
 </div>
+
+<script>
+    $('#loading').modal('hide');
+
+var line = new Sonic({
+    width: 130,
+    height: 100,
+
+    stepsPerFrame: 1,
+    trailLength: .3,
+    pointDistance: .1,
+    fps: 15,
+    //step: 'fader',
+
+    fillColor: '#7ac14f',
+
+    setup: function() {
+	this._.lineWidth = 20;
+    },
+
+    path: [
+	    ['line', 0, 20, 130, 20],
+	    ['line', 130, 20, 0, 20]
+    ]
+
+});
+
+line.play();
+
+//document.body.appendChild(square.canvas);
+
+$(line.canvas).appendTo('#loadingSq');
+
+</script>
 </body>
 
 
